@@ -99,7 +99,7 @@ const Contact = () => {
 
       {/* Two-Column Layout */}
       <section className="py-20 bg-background w-full overflow-x-hidden">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-20 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div>
@@ -324,7 +324,7 @@ const Contact = () => {
 
       {/* FAQ Section */}
       <section className="py-20 bg-muted w-full overflow-x-hidden">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-20 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="space-y-4">
@@ -391,7 +391,7 @@ const Contact = () => {
 
       {/* Social Media */}
       <section className="py-20 bg-background w-full overflow-x-hidden">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-20 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">Connect With Us</h2>
             <div className="flex justify-center gap-6">

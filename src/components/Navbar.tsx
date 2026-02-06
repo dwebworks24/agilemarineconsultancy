@@ -69,7 +69,7 @@ const Navbar = () => {
         isScrolled ? "bg-white shadow-md" : "bg-white/95 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-20">
         <div className="flex items-center justify-between h-20">
           {/* Logo with white background */}
           <Link to="/" className="flex items-center">
