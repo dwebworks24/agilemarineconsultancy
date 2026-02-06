@@ -71,8 +71,8 @@ const ServicesCircle = () => {
   return (
     <section ref={sectionRef} className="bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
       <div className="container mx-auto px-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
+        <div className="text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 mt-16">Our Services</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive Maritime Solutions Tailored to Your Needs
           </p>
@@ -221,11 +221,11 @@ const ServicesCircle = () => {
           })}
         </div>
 
-        <div className="text-center mt-16">
+        {/* <div className="text-center">
           <p className="text-muted-foreground mb-6">
             Explore our comprehensive range of maritime consultancy services
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
