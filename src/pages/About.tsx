@@ -126,7 +126,7 @@ const About = () => {
 
       {/* Company Introduction - Image on Left, Text on Right */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="animate-fade-in">
               <img
@@ -150,7 +150,7 @@ const About = () => {
 
       {/* Mission & Vision */}
       <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <Card className="card-hover border-none shadow-md bg-gradient-to-br from-primary/10 to-primary/5 animate-fade-in">
               <CardContent className="p-8">
@@ -184,7 +184,7 @@ const About = () => {
 
       {/* Core Values */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Our Core Values</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -213,7 +213,7 @@ const About = () => {
 
       {/* Certifications */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Our Certifications</h2>
             <p className="text-lg text-muted-foreground">Certified by UAF AMERICO</p>
@@ -242,7 +242,7 @@ const About = () => {
 
       {/* Software & Tools */}
       <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Software & Tools We Use</h2>
             <p className="text-lg text-muted-foreground">Industry-leading technology for superior results</p>
@@ -266,7 +266,7 @@ const About = () => {
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-20 text-center">
           <h2 className="text-4xl font-bold mb-6">Join Our Journey</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Discover how our expertise can elevate your maritime operations

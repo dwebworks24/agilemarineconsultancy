@@ -21,7 +21,7 @@ const ProjectManagement = () => {
 
       {/* Service Overview */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-6">Comprehensive Project Management</h2>
@@ -58,7 +58,7 @@ const ProjectManagement = () => {
 
       {/* What We Manage */}
       <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What We Manage</h2>
           </div>
@@ -85,7 +85,7 @@ const ProjectManagement = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-20 text-center">
           <h2 className="text-4xl font-bold mb-6">Need Expert Project Management?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Let us handle the complexity while you focus on your core business. Our project management expertise ensures successful delivery every time.

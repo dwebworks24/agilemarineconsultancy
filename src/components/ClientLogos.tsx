@@ -61,7 +61,7 @@ const ClientLogos = () => {
 
   return (
     <section className="py-20 bg-muted overflow-hidden">
-      <div className="container mx-auto px-4 mb-12">
+      <div className="container mx-auto px-20 mb-12">
         <h2 className="text-4xl font-bold text-center mb-4">Our Valued Clients</h2>
         <p className="text-center text-muted-foreground text-lg">
           Trusted by Leading Maritime Companies

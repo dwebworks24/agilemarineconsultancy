@@ -21,7 +21,7 @@ const RegulatoryCompliance = () => {
 
       {/* Service Overview */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-6">Full Compliance Assurance</h2>
@@ -58,7 +58,7 @@ const RegulatoryCompliance = () => {
 
       {/* Documentation */}
       <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Documentation We Prepare</h2>
           </div>
@@ -85,7 +85,7 @@ const RegulatoryCompliance = () => {
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-20 text-center">
           <h2 className="text-4xl font-bold mb-6">Ensure Full Compliance</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Stay compliant with all maritime regulations. Let our experts handle your documentation needs.

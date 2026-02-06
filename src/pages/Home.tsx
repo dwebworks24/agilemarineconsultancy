@@ -101,7 +101,7 @@ const Home = () => {
 
       {/* About Snippet */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6 animate-fade-in">Welcome to Agile Marine Consultancy</h2>
             <p className="text-base text-muted-foreground leading-relaxed mb-8 animate-fade-in text-justify">
@@ -123,7 +123,7 @@ const Home = () => {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Why Choose Agile Marine Consultancy</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -170,7 +170,7 @@ const Home = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-20 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
@@ -197,7 +197,7 @@ const Home = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-20 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
               Ready to Navigate Your Maritime Challenges?

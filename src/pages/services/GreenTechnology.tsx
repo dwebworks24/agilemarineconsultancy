@@ -20,7 +20,7 @@ const GreenTechnology = () => {
       />
 
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-6">Sustainable Maritime Solutions</h2>
@@ -56,7 +56,7 @@ const GreenTechnology = () => {
       </section>
 
       <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Green Technologies</h2>
           </div>
@@ -81,7 +81,7 @@ const GreenTechnology = () => {
       </section>
 
       <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-20 text-center">
           <h2 className="text-4xl font-bold mb-6">Go Green with Your Fleet</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Sustainable maritime solutions for environmental compliance and reduced operational costs.
