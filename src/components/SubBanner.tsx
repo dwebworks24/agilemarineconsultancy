@@ -41,12 +41,12 @@ const SubBanner = ({ title, subtitle, breadcrumbs, backgroundImage }: SubBannerP
         </nav>
         
         {/* Title */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center animate-fade-in text-shadow-lg">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-center animate-fade-in text-shadow-lg">
           {title}
         </h1>
         
         {/* Subtitle */}
-        <p className="text-lg md:text-xl lg:text-2xl opacity-90 text-center max-w-3xl animate-fade-in text-shadow">
+        <p className="text-base md:text-lg lg:text-xl opacity-90 text-center max-w-3xl animate-fade-in text-shadow">
           {subtitle}
         </p>
       </div>
