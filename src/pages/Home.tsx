@@ -208,7 +208,7 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${hero2})` }}
         />
-        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-dark/90 to-primary/85" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
