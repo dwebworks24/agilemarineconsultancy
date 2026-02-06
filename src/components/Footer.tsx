@@ -20,10 +20,10 @@ const Footer = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-20 max-w-7xl overflow-x-hidden">
+      <div className="container mx-auto px-4 md:px-20 max-w-7xl overflow-x-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {/* Column 1 - Logo, About & Social Media */}
-          <div className="min-w-0">
+          <div className="min-w-0 text-left">
             <div className="bg-white p-4 rounded-lg shadow-lg inline-block mb-5">
               <img src={logo} alt="Agile Marine Consultancy" className="w-40 h-auto" />
             </div>
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2 - Quick Links */}
-          <div className="min-w-0">
+          <div className="min-w-0 text-left">
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b-2 border-[#1572B9] inline-block">Quick Links</h3>
             <ul className="space-y-3">
               <li>
@@ -109,7 +109,7 @@ const Footer = () => {
           </div>
 
           {/* Column 3 - All Services in 2 Columns */}
-          <div className="min-w-0 lg:-ml-12">
+          <div className="min-w-0 text-left lg:-ml-12">
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b-2 border-[#1572B9] inline-block">Our Services</h3>
             <div className="grid grid-cols-2 gap-x-8 gap-y-3">
               <ul className="space-y-3">
@@ -170,7 +170,7 @@ const Footer = () => {
           </div>
 
           {/* Column 4 - Contact Info */}
-          <div className="min-w-0">
+          <div className="min-w-0 text-left">
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b-2 border-[#1572B9] inline-block">Contact Info</h3>
             
             {/* Phone Numbers - Icon beside content */}
@@ -227,7 +227,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-white/10 pt-8 mt-10">
-          <div className="text-center">
+          <div className="text-left md:text-center">
             <p className="text-sm text-gray-500">
               © 2026 Agile Marine Consultancy. All rights reserved.
             </p>
