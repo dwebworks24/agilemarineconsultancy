@@ -45,33 +45,27 @@ const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const itemsPerView = typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 3;
-  const maxIndex = Math.ceil(testimonials.length / itemsPerView) - 1;
-
   useEffect(() => {
     if (!isAutoPlaying) return;
     
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+      setCurrentIndex((prev) => (prev >= testimonials.length - 1 ? 0 : prev + 1));
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [isAutoPlaying, maxIndex]);
+  }, [isAutoPlaying]);
 
   const nextSlide = () => {
     setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev >= testimonials.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
     setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+    setCurrentIndex((prev) => (prev <= 0 ? testimonials.length - 1 : prev - 1));
   };
 
-  const getVisibleTestimonials = () => {
-    const start = currentIndex * itemsPerView;
-    return testimonials.slice(start, start + itemsPerView);
-  };
+  const currentTestimonial = testimonials[currentIndex];
 
   return (
     <section className="py-12 md:py-20 bg-muted/30">
@@ -83,14 +77,14 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-3xl mx-auto">
           {/* Navigation Arrows */}
           <Button
             variant="ghost"
             size="icon"
-            className="absolute -left-2 md:-left-12 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg hover:bg-primary hover:text-white h-10 w-10 md:h-12 md:w-12 rounded-full"
+            className="absolute -left-2 md:-left-16 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg hover:bg-primary hover:text-white h-10 w-10 md:h-12 md:w-12 rounded-full"
             onClick={prevSlide}
-            aria-label="Previous testimonials"
+            aria-label="Previous testimonial"
           >
             <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
           </Button>
@@ -98,52 +92,50 @@ const TestimonialsSection = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg hover:bg-primary hover:text-white h-10 w-10 md:h-12 md:w-12 rounded-full"
+            className="absolute -right-2 md:-right-16 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg hover:bg-primary hover:text-white h-10 w-10 md:h-12 md:w-12 rounded-full"
             onClick={nextSlide}
-            aria-label="Next testimonials"
+            aria-label="Next testimonial"
           >
             <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
           </Button>
 
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 px-8 md:px-0">
-            {getVisibleTestimonials().map((testimonial, index) => (
-              <div
-                key={currentIndex * itemsPerView + index}
-                className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative"
-              >
-                {/* Quote Icon */}
-                <div className="absolute -top-3 -left-3 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg">
-                  <Quote className="h-5 w-5 md:h-6 md:w-6 text-white" />
-                </div>
-                
-                {/* Stars */}
-                <div className="flex gap-1 mb-4 mt-2">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 md:w-5 md:h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                
-                {/* Quote */}
-                <p className="text-sm md:text-base text-muted-foreground mb-6 leading-relaxed italic">
-                  "{testimonial.quote}"
-                </p>
-                
-                {/* Author */}
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-sm md:text-base text-foreground">{testimonial.name}</p>
-                  <p className="text-xs md:text-sm text-primary font-medium">{testimonial.role}</p>
-                  <p className="text-xs text-muted-foreground">{testimonial.company}</p>
-                </div>
+          {/* Single Testimonial Card */}
+          <div className="px-8 md:px-0">
+            <div
+              key={currentIndex}
+              className="bg-white rounded-2xl p-8 md:p-12 shadow-lg relative text-center animate-fade-in"
+            >
+              {/* Quote Icon */}
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg mx-auto mb-6">
+                <Quote className="h-7 w-7 md:h-8 md:w-8 text-white" />
               </div>
-            ))}
+              
+              {/* Stars */}
+              <div className="flex gap-1 justify-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 md:w-6 md:h-6 text-amber-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              
+              {/* Quote */}
+              <p className="text-base md:text-xl text-muted-foreground mb-8 leading-relaxed italic max-w-2xl mx-auto">
+                "{currentTestimonial.quote}"
+              </p>
+              
+              {/* Author */}
+              <div>
+                <p className="font-bold text-lg md:text-xl text-foreground">{currentTestimonial.name}</p>
+                <p className="text-sm md:text-base text-primary font-medium">{currentTestimonial.role}</p>
+                <p className="text-sm text-muted-foreground">{currentTestimonial.company}</p>
+              </div>
+            </div>
           </div>
 
           {/* Dots Navigation */}
           <div className="flex justify-center gap-2 mt-8">
-            {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+            {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => {
@@ -155,7 +147,7 @@ const TestimonialsSection = () => {
                     ? "bg-primary w-8" 
                     : "bg-primary/30 w-2 hover:bg-primary/50"
                 }`}
-                aria-label={`Go to testimonial group ${index + 1}`}
+                aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>
