@@ -16,6 +16,8 @@ import value1 from "@/assets/value-1.jpg";
 import value2 from "@/assets/value-2.jpg";
 import value3 from "@/assets/value-3.jpg";
 import value4 from "@/assets/value-4.jpg";
+import hero1 from "@/assets/hero-1.jpg";
+import hero2 from "@/assets/hero-2.jpg";
 
 const stats = [
   { icon: Users, number: 15, label: "Happy Clients", suffix: "+", gradient: "from-blue-500 to-cyan-500" },
@@ -167,7 +169,12 @@ const Home = () => {
       </section>
 
       {/* Statistics Counter */}
-      <section ref={statsRef} className="py-12 md:py-20 bg-gradient-to-br from-navy-dark to-primary text-white relative overflow-hidden">
+      <section ref={statsRef} className="py-12 md:py-20 text-white relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${hero1})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-dark/90 to-primary/85" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
@@ -196,7 +203,12 @@ const Home = () => {
     
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden">
+      <section className="py-12 md:py-20 text-white relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${hero2})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
