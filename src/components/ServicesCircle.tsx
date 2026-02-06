@@ -70,15 +70,31 @@ const ServicesCircle = () => {
 
   return (
     <section ref={sectionRef} className="py-20 bg-background overflow-hidden">
-      <div className="container mx-auto px-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <div className="container mx-auto px-4 md:px-20">
+        <div className="text-center mb-4 md:mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">Our Services</h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive Maritime Solutions Tailored to Your Needs
           </p>
         </div>
 
-        <div className="relative w-full max-w-5xl mx-auto" style={{ aspectRatio: '1' }}>
+        {/* Mobile Grid Layout */}
+        <div className="md:hidden grid grid-cols-2 gap-3">
+          {services.map((service, index) => (
+            <Link
+              key={index}
+              to={`/services/${service.name.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-')}`}
+              className={`${service.color} rounded-xl p-4 flex items-center justify-center min-h-[100px] shadow-lg hover:scale-105 transition-transform`}
+            >
+              <p className="text-white font-semibold text-xs text-center leading-tight">
+                {service.name}
+              </p>
+            </Link>
+          ))}
+        </div>
+
+        {/* Desktop Circular Layout */}
+        <div className="hidden md:block relative w-full max-w-5xl mx-auto" style={{ aspectRatio: '1' }}>
           {/* Center Ellipse - Reduced Size */}
           <div
             className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-600 ease-out ${
@@ -221,8 +237,8 @@ const ServicesCircle = () => {
           })}
         </div>
 
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
+        <div className="hidden md:block text-center mt-4">
+          <p className="text-muted-foreground">
             Explore our comprehensive range of maritime consultancy services
           </p>
         </div>
