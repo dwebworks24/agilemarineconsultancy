@@ -100,7 +100,7 @@ const Home = () => {
       <HeroSlider />
 
       {/* About Snippet */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-20">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6 animate-fade-in">Welcome to Agile Marine Consultancy</h2>
@@ -122,7 +122,7 @@ const Home = () => {
       <ServicesCircle />
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Why Choose Agile Marine Consultancy</h2>

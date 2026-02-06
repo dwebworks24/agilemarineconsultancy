@@ -69,7 +69,7 @@ const ServicesCircle = () => {
   const radius = 30.4; // Reduced from 38 to 30.4 (20% reduction for tighter gaps)
 
   return (
-    <section ref={sectionRef} className="bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+    <section ref={sectionRef} className="py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
