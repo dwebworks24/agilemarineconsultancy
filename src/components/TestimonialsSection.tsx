@@ -103,32 +103,32 @@ const TestimonialsSection = () => {
           <div className="px-8 md:px-0">
             <div
               key={currentIndex}
-              className="bg-white rounded-2xl p-8 md:p-12 shadow-lg relative text-center animate-fade-in"
+              className="bg-white rounded-2xl p-6 md:p-8 shadow-lg relative text-center animate-fade-in"
             >
               {/* Quote Icon */}
-              <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg mx-auto mb-6">
-                <Quote className="h-7 w-7 md:h-8 md:w-8 text-white" />
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg mx-auto mb-4">
+                <Quote className="h-5 w-5 md:h-6 md:w-6 text-white" />
               </div>
               
               {/* Stars */}
-              <div className="flex gap-1 justify-center mb-6">
+              <div className="flex gap-1 justify-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 md:w-6 md:h-6 text-amber-400 fill-current" viewBox="0 0 20 20">
+                  <svg key={i} className="w-4 h-4 md:w-5 md:h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
               
               {/* Quote */}
-              <p className="text-base md:text-xl text-muted-foreground mb-8 leading-relaxed italic max-w-2xl mx-auto">
+              <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed italic max-w-2xl mx-auto">
                 "{currentTestimonial.quote}"
               </p>
               
               {/* Author */}
               <div>
-                <p className="font-bold text-lg md:text-xl text-foreground">{currentTestimonial.name}</p>
-                <p className="text-sm md:text-base text-primary font-medium">{currentTestimonial.role}</p>
-                <p className="text-sm text-muted-foreground">{currentTestimonial.company}</p>
+                <p className="font-bold text-base md:text-lg text-foreground">{currentTestimonial.name}</p>
+                <p className="text-xs md:text-sm text-primary font-medium">{currentTestimonial.role}</p>
+                <p className="text-xs text-muted-foreground">{currentTestimonial.company}</p>
               </div>
             </div>
           </div>
