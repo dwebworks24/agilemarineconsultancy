@@ -72,12 +72,12 @@ const HeroSlider = () => {
               </p>
               {index === 0 && (
                 <div className="flex flex-wrap gap-4 relative z-20">
-                  <Button asChild size="lg" className="bg-gradient-to-r from-primary to-accent hover:scale-105 transition-transform text-white shadow-lg">
+                  <Button asChild size="lg" className="bg-primary text-white hover:bg-secondary transition-all duration-300 ease-in-out shadow-lg rounded-lg px-8">
                     <Link to="/services">
                       Explore Services
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary bg-white/10 backdrop-blur-sm">
+                  <Button asChild size="lg" className="bg-primary text-white hover:bg-secondary transition-all duration-300 ease-in-out shadow-lg rounded-lg px-8 border-0">
                     <Link to="/contact">
                       Contact Us
                     </Link>
