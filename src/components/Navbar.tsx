@@ -71,11 +71,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-20">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with white background */}
-          <Link to="/" className="flex items-center">
-            <div className="">
-              <img src={logo} alt="Agile Marine Consultancy" className="h-14 md:h-16" style={{ width: 'auto', maxWidth: '180px' }} />
-            </div>
+          {/* Logo */}
+          <Link to="/" className="flex items-center h-full">
+            <img src={logo} alt="Agile Marine Consultancy" className="h-20 object-contain" style={{ width: 'auto' }} />
           </Link>
 
           {/* Desktop Navigation - Centered */}
