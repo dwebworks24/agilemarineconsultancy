@@ -53,7 +53,7 @@ const HeroSlider = () => {
               alt={slide.title}
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+            <div className="absolute inset-0 bg-black/50 pointer-events-none" />
           </div>
 
           <div className="relative h-full flex items-center px-4">
