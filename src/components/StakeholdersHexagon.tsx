@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import watermarkShip from "@/assets/watermark-ship.png";
 
 interface Stakeholder {
   name: string;
@@ -63,8 +64,19 @@ const StakeholdersHexagon = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-background">
-      <div className="container mx-auto px-20">
+    <section ref={sectionRef} className="py-20 bg-background relative">
+      {/* Watermark Background */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${watermarkShip})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '50%',
+          opacity: 0.05,
+        }}
+      />
+      <div className="container mx-auto px-20 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Stakeholder Network</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

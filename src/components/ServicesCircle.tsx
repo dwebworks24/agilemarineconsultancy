@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import watermarkShip from "@/assets/watermark-ship.png";
 
 interface Service {
   name: string;
@@ -69,8 +70,19 @@ const ServicesCircle = () => {
   const radius = 30.4; // Reduced from 38 to 30.4 (20% reduction for tighter gaps)
 
   return (
-    <section ref={sectionRef} className="bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
-      <div className="container mx-auto px-20">
+    <section ref={sectionRef} className="bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden relative">
+      {/* Watermark Background */}
+      <div 
+        className="absolute inset-0 pointer-events-none flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${watermarkShip})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '60%',
+          opacity: 0.05,
+        }}
+      />
+      <div className="container mx-auto px-20 relative z-10">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 mt-16">Our Services</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
