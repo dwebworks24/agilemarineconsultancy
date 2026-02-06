@@ -69,11 +69,11 @@ const ServicesCircle = () => {
   const radius = 30.4; // Reduced from 38 to 30.4 (20% reduction for tighter gaps)
 
   return (
-    <section ref={sectionRef} className="py-20 bg-background overflow-hidden">
+    <section ref={sectionRef} className="py-12 md:py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-20">
         <div className="text-center mb-4 md:mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">Our Services</h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2">Our Services</h2>
+          <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive Maritime Solutions Tailored to Your Needs
           </p>
         </div>

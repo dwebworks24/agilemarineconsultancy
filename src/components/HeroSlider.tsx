@@ -40,7 +40,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden mt-20">
+    <div className="relative h-[70vh] md:h-screen overflow-hidden mt-16 md:mt-20">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -57,8 +57,8 @@ const HeroSlider = () => {
           </div>
 
           <div className="relative h-full flex items-center px-4">
-            <div className="max-w-3xl text-white animate-fade-in pl-[80px] md:pl-[150px]">
-              <h1 className="text-3xl md:text-[52px] lg:text-[52px] font-bold mb-4 animate-fade-in text-left leading-tight">
+            <div className="max-w-3xl text-white animate-fade-in pl-4 md:pl-[150px]">
+              <h1 className="text-2xl md:text-[52px] lg:text-[52px] font-bold mb-3 md:mb-4 animate-fade-in text-left leading-tight">
                 {index === 0 ? (
                   <>
                     <span className="whitespace-nowrap">Navigating Excellence,</span>
@@ -67,7 +67,7 @@ const HeroSlider = () => {
                   </>
                 ) : slide.title}
               </h1>
-              <p className="text-base md:text-xl lg:text-xl mb-8 animate-fade-in opacity-90 text-left">
+              <p className="text-sm md:text-xl lg:text-xl mb-6 md:mb-8 animate-fade-in opacity-90 text-left">
                 {index === 0 ? "Expert Maritime Solutions & Consultancy Services" : slide.subtitle}
               </p>
               {index === 0 && (

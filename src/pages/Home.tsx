@@ -100,11 +100,11 @@ const Home = () => {
       <HeroSlider />
 
       {/* About Snippet */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-20">
+      <section className="py-12 md:py-20 bg-muted/30">
+        <div className="container mx-auto px-4 md:px-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6 animate-fade-in">Welcome to Agile Marine Consultancy</h2>
-            <p className="text-base text-muted-foreground leading-relaxed mb-8 animate-fade-in text-justify">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 animate-fade-in">Welcome to Agile Marine Consultancy</h2>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8 animate-fade-in text-justify">
               We specialize in delivering innovative solutions and expert consultancy services tailored to the maritime
               industry. With a deep commitment to excellence and a passion for maritime engineering, we are dedicated to
               helping our clients navigate challenges and optimize their operations efficiently.
@@ -122,16 +122,16 @@ const Home = () => {
       <ServicesCircle />
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Agile Marine Consultancy</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-12 md:py-20 bg-muted/30">
+        <div className="container mx-auto px-4 md:px-20">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Why Choose Agile Marine Consultancy</h2>
+            <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Your trusted partner in maritime excellence
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
@@ -145,7 +145,7 @@ const Home = () => {
               >
                 <Card className="group border-none shadow-md overflow-hidden h-full hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
                   <CardContent className="p-0 flex flex-col h-full">
-                    <div className="relative h-52 overflow-hidden">
+                    <div className="relative h-32 md:h-52 overflow-hidden">
                       <img
                         src={value.image}
                         alt={value.title}
@@ -153,9 +153,9 @@ const Home = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                     </div>
-                    <div className="p-6 flex-1 flex flex-col bg-white">
-                      <h3 className="text-2xl font-bold mb-3 gradient-text">{value.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed text-justify flex-1">{value.description}</p>
+                    <div className="p-3 md:p-6 flex-1 flex flex-col bg-white">
+                      <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-3 gradient-text">{value.title}</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed text-justify flex-1">{value.description}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -166,23 +166,23 @@ const Home = () => {
       </section>
 
       {/* Statistics Counter */}
-      <section ref={statsRef} className="py-20 bg-gradient-to-br from-navy-dark to-primary text-white relative overflow-hidden">
+      <section ref={statsRef} className="py-12 md:py-20 bg-gradient-to-br from-navy-dark to-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
-        <div className="container mx-auto px-20 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="container mx-auto px-4 md:px-20 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center mx-auto mb-6 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-2xl relative overflow-hidden`}>
+                <div className={`w-16 h-16 md:w-24 md:h-24 rounded-xl md:rounded-2xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center mx-auto mb-4 md:mb-6 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-2xl relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
-                  <stat.icon className="h-12 w-12 text-white relative z-10 animate-float" style={{ animationDelay: `${index * 200}ms` }} />
+                  <stat.icon className="h-8 w-8 md:h-12 md:w-12 text-white relative z-10 animate-float" style={{ animationDelay: `${index * 200}ms` }} />
                 </div>
-                <div className="text-6xl font-bold mb-3 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent animate-bounce-in" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="text-3xl md:text-6xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent animate-bounce-in" style={{ animationDelay: `${index * 100}ms` }}>
                   {counts[index]}
                   {stat.suffix}
                 </div>
-                <div className="text-xl opacity-90 font-medium">{stat.label}</div>
+                <div className="text-sm md:text-xl opacity-90 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -193,20 +193,20 @@ const Home = () => {
       <ClientLogos />
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
-        <div className="container mx-auto px-20 relative z-10">
+        <div className="container mx-auto px-4 md:px-20 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 animate-fade-in">
               Ready to Navigate Your Maritime Challenges?
             </h2>
-            <p className="text-xl mb-8 opacity-90 animate-fade-in">
+            <p className="text-base md:text-xl mb-6 md:mb-8 opacity-90 animate-fade-in">
               Let's discuss how we can help optimize your maritime operations
             </p>
             <Link to="/contact">
-              <Button size="lg" variant="secondary" className="text-lg px-8 hover:scale-105 transition-transform animate-fade-in">
+              <Button size="lg" variant="secondary" className="text-base md:text-lg px-6 md:px-8 hover:scale-105 transition-transform animate-fade-in">
                 Get Started Today
               </Button>
             </Link>
