@@ -84,8 +84,8 @@ const ServicesCircle = () => {
       />
       <div className="container mx-auto px-20 relative z-10">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 mt-16">Our Services</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-16">Our Services</h2>
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             Comprehensive Maritime Solutions Tailored to Your Needs
           </p>
         </div>

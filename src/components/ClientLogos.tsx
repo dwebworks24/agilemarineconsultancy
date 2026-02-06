@@ -62,8 +62,8 @@ const ClientLogos = () => {
   return (
     <section className="py-12 md:py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-20 mb-8 md:mb-12">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-2 md:mb-4">Our Valued Clients</h2>
-        <p className="text-center text-muted-foreground text-sm md:text-lg">
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-2 md:mb-4">Our Valued Clients</h2>
+        <p className="text-center text-muted-foreground text-sm md:text-base">
           Trusted by Leading Maritime Companies
         </p>
       </div>
