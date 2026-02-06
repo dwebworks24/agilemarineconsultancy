@@ -56,7 +56,7 @@ const StakeholdersHexagon = () => {
 
   const getHexagonPosition = (position: number) => {
     const angle = (position * 60 - 90) * (Math.PI / 180); // 60° apart, starting from top
-    const radius = 40; // Reduced from 45 to 40 (10% reduction for tighter gaps)
+    const radius = 32; // Reduced from 40 to 32 (20% reduction for tighter gaps)
     const x = 50 + radius * Math.cos(angle);
     const y = 50 + radius * Math.sin(angle);
     return { x, y };
