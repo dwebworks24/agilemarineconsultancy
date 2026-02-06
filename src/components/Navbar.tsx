@@ -143,7 +143,7 @@ const Navbar = () => {
             <a 
               href="/brochure.pdf" 
               download
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-secondary transition-colors shadow-md"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-secondary transition-all duration-300 ease-in-out shadow-md"
             >
               <Download className="h-5 w-5" />
               Download Brochure
