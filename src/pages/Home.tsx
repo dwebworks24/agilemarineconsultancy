@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import HeroSlider from "@/components/HeroSlider";
 import ClientLogos from "@/components/ClientLogos";
 import ServicesCircle from "@/components/ServicesCircle";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import {
   Users,
   Ship,
@@ -191,6 +192,9 @@ const Home = () => {
 
       {/* Client Logos Carousel */}
       <ClientLogos />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* CTA Section */}
       <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden">
