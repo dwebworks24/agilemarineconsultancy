@@ -193,7 +193,7 @@ const Home = () => {
       <ClientLogos />
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
