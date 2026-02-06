@@ -1,10 +1,22 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Linkedin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import logo from "@/assets/logo.png";
+import wavePattern from "@/assets/wave-pattern.png";
 
 const Footer = () => {
   return (
     <footer className="relative bg-[#001F3F] text-white pt-16 pb-8 w-full max-w-[100vw] overflow-x-hidden">
+      {/* Wave Pattern Background */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${wavePattern})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          opacity: 0.06,
+        }}
+      />
       {/* Wave decoration */}
       <div className="absolute top-0 left-0 right-0 h-16 -translate-y-full">
         <svg
