@@ -28,7 +28,7 @@ const Header = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-20">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
             <Anchor

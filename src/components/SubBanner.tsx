@@ -23,7 +23,7 @@ const SubBanner = ({ title, subtitle, breadcrumbs, backgroundImage }: SubBannerP
       <div className="absolute inset-0 bg-black/50" />
       
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-20">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4 opacity-90" aria-label="Breadcrumb">
           {breadcrumbs.map((crumb, index) => (

@@ -18,7 +18,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-24 bg-section-gradient">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-20">
         <div className="text-center mb-16">
           <span className="text-secondary font-semibold uppercase tracking-wider text-sm">
             Get In Touch

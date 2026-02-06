@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-hero-overlay" />
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-20 text-center">
         <div className="max-w-4xl mx-auto animate-fade-up">
           <span className="inline-block text-secondary font-semibold uppercase tracking-wider text-sm mb-6 animate-fade-in">
             Maritime Excellence Since 1998
