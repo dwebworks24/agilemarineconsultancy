@@ -192,19 +192,59 @@ const Home = () => {
       {/* Client Logos Carousel */}
       <ClientLogos />
 
-      {/* CTA Section */}
+      {/* CTA Section with Testimonials */}
       <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 wave-animation" />
         </div>
         <div className="container mx-auto px-4 md:px-20 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 animate-fade-in">
               Ready to Navigate Your Maritime Challenges?
             </h2>
-            <p className="text-base md:text-xl mb-6 md:mb-8 opacity-90 animate-fade-in">
+            <p className="text-base md:text-xl mb-8 md:mb-12 opacity-90 animate-fade-in">
               Let's discuss how we can help optimize your maritime operations
             </p>
+            
+            {/* Testimonials */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 md:mb-12">
+              {[
+                {
+                  quote: "Agile Marine Consultancy provided exceptional support for our vessel certification. Their expertise saved us time and money.",
+                  name: "Captain Ahmed",
+                  company: "Al Hamoor Marine"
+                },
+                {
+                  quote: "Professional, reliable, and always available. They understood our needs and delivered beyond expectations.",
+                  name: "Mohammad Al Rashid",
+                  company: "Liwa Shipbuilding"
+                },
+                {
+                  quote: "Their naval architecture team is outstanding. The design optimization reduced our fuel consumption significantly.",
+                  name: "Sarah Johnson",
+                  company: "Clearwater Shipping"
+                }
+              ].map((testimonial, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-left hover:bg-white/15 transition-all duration-300"
+                >
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-secondary fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-sm md:text-base opacity-90 mb-4 italic">"{testimonial.quote}"</p>
+                  <div>
+                    <p className="font-semibold text-sm">{testimonial.name}</p>
+                    <p className="text-xs opacity-70">{testimonial.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
             <Link to="/contact">
               <Button size="lg" variant="secondary" className="text-base md:text-lg px-6 md:px-8 hover:scale-105 transition-transform animate-fade-in">
                 Get Started Today
