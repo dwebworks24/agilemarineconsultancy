@@ -106,7 +106,7 @@ const Home = () => {
       <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4 md:px-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 animate-fade-in">Welcome to Agile Marine Consultancy</h2>
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-6 animate-fade-in">Welcome to Agile Marine Consultancy</h2>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8 animate-fade-in text-justify">
               We specialize in delivering innovative solutions and expert consultancy services tailored to the maritime
               industry. With a deep commitment to excellence and a passion for maritime engineering, we are dedicated to
@@ -128,8 +128,8 @@ const Home = () => {
       <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4 md:px-20">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Why Choose Agile Marine Consultancy</h2>
-            <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">Why Choose Agile Marine Consultancy</h2>
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
               Your trusted partner in maritime excellence
             </p>
           </div>
@@ -214,7 +214,7 @@ const Home = () => {
         </div>
         <div className="container mx-auto px-4 md:px-20 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 animate-fade-in">
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 animate-fade-in">
               Ready to Navigate Your Maritime Challenges?
             </h2>
             <p className="text-base md:text-xl mb-6 md:mb-8 opacity-90 animate-fade-in">
