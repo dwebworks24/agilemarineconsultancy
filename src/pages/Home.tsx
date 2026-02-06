@@ -193,8 +193,7 @@ const Home = () => {
       {/* Client Logos Carousel */}
       <ClientLogos />
 
-      {/* Testimonials Section */}
-      <TestimonialsSection />
+    
 
       {/* CTA Section */}
       <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden">
@@ -217,6 +216,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+        {/* Testimonials Section */}
+      <TestimonialsSection />
     </div>
   );
 };
