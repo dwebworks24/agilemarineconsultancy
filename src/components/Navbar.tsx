@@ -69,11 +69,11 @@ const Navbar = () => {
         isScrolled ? "bg-white shadow-md" : "bg-white/95 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-20">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 md:px-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center h-full">
-            <img src={logo} alt="Agile Marine Consultancy" className="h-20 object-contain" style={{ width: 'auto' }} />
+            <img src={logo} alt="Agile Marine Consultancy" className="h-14 md:h-20 object-contain" style={{ width: 'auto' }} />
           </Link>
 
           {/* Desktop Navigation - Centered */}
