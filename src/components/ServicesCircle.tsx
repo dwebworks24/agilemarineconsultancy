@@ -78,7 +78,23 @@ const ServicesCircle = () => {
           </p>
         </div>
 
-        <div className="relative w-full max-w-5xl mx-auto" style={{ aspectRatio: '1' }}>
+        {/* Mobile Grid Layout */}
+        <div className="md:hidden grid grid-cols-2 gap-3">
+          {services.map((service, index) => (
+            <Link
+              key={index}
+              to={`/services/${service.name.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-')}`}
+              className={`${service.color} rounded-xl p-4 flex items-center justify-center min-h-[100px] shadow-lg hover:scale-105 transition-transform`}
+            >
+              <p className="text-white font-semibold text-xs text-center leading-tight">
+                {service.name}
+              </p>
+            </Link>
+          ))}
+        </div>
+
+        {/* Desktop Circular Layout */}
+        <div className="hidden md:block relative w-full max-w-5xl mx-auto" style={{ aspectRatio: '1' }}>
           {/* Center Ellipse - Reduced Size */}
           <div
             className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-600 ease-out ${
