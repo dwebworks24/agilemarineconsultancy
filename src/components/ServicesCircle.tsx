@@ -66,7 +66,7 @@ const ServicesCircle = () => {
     return { x, y };
   };
 
-  const radius = 38; // percentage radius from center
+  const radius = 30.4; // Reduced from 38 to 30.4 (20% reduction for tighter gaps)
 
   return (
     <section ref={sectionRef} className="py-20 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
