@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import watermarkShip from "@/assets/watermark-ship.png";
-import wavePattern from "@/assets/wave-pattern.png";
 
 interface Service {
   name: string;
@@ -72,17 +71,6 @@ const ServicesCircle = () => {
 
   return (
     <section ref={sectionRef} className="bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden relative">
-      {/* Wave Pattern Background */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `url(${wavePattern})`,
-          backgroundPosition: 'top left',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          opacity: 0.08,
-        }}
-      />
       {/* Watermark Background */}
       <div 
         className="absolute inset-0 pointer-events-none flex items-center justify-center"
